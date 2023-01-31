@@ -1,0 +1,3834 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+            integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.4.3/js/tabulator.min.js"
+            integrity="sha512-xu/xzHeJxvPLt6tuy68mvBtY4XCDpGmMe1AV4+S1viFUvy0Qygmoq1yePeDenRRNRSqYx3GvucTAnsGiO0FRaA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.4.3/js/jquery_wrapper.min.js"
+            integrity="sha512-Q+u5tqLUv7zbQ1QBm6Pcwc2N2PbqrRC//Ze2YGnlSe5TBbO0KrCYZ/WvgjTlNnzVtOHU9pNoztQjJxpSXa5boQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.4.3/css/tabulator.min.css"
+          integrity="sha512-gHU0A38WiT7Jyubh7KcU6af64wRVBnNEB1541Ue5W050dRL/f21IWkAD8sl85nVjPyLnbffiXsCborGDQ55bYQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script type="application/javascript">
+        let rewardStatistics = [
+  {
+    "count": 10325,
+    "total": 680871.8,
+    "name": "Digital Download Bundle",
+    "base_price": 60.0,
+    "raised_over_base": 61371.80000000005,
+    "percentage_of_total": 33.669531271735096,
+    "average": 65.944
+  },
+  {
+    "count": 3676,
+    "total": 158685.64,
+    "name": null,
+    "base_price": NaN,
+    "raised_over_base": NaN,
+    "percentage_of_total": 7.847102961754765,
+    "average": 43.16801958650708
+  },
+  {
+    "count": 1811,
+    "total": 130113.91,
+    "name": "P4A hoodie",
+    "base_price": 65.0,
+    "raised_over_base": 12398.910000000003,
+    "percentage_of_total": 6.434213256640568,
+    "average": 71.84644395361678
+  },
+  {
+    "count": 1462,
+    "total": 83683.12,
+    "name": "P4A Puzzle!",
+    "base_price": 40.0,
+    "raised_over_base": 25203.119999999995,
+    "percentage_of_total": 4.138181998074176,
+    "average": 57.23879616963064
+  },
+  {
+    "count": 1587,
+    "total": 71317.46,
+    "name": "P4A Dice",
+    "base_price": 40.0,
+    "raised_over_base": 7837.460000000006,
+    "percentage_of_total": 3.5266924694057193,
+    "average": 44.93853812224323
+  },
+  {
+    "count": 1875,
+    "total": 64055.31,
+    "name": "P4A Playing Cards",
+    "base_price": 30.0,
+    "raised_over_base": 7805.309999999998,
+    "percentage_of_total": 3.167574664078738,
+    "average": 34.162832
+  },
+  {
+    "count": 1054,
+    "total": 61658.2,
+    "name": "P4A 2022 Socks",
+    "base_price": 50.0,
+    "raised_over_base": 8958.199999999997,
+    "percentage_of_total": 3.04903609322474,
+    "average": 58.49924098671727
+  },
+  {
+    "count": 1749,
+    "total": 49119.73,
+    "name": "P4A 2022 Commemorative Coin",
+    "base_price": 24.0,
+    "raised_over_base": 7143.730000000003,
+    "percentage_of_total": 2.429001003264028,
+    "average": 28.084465408805034
+  },
+  {
+    "count": 125,
+    "total": 31250.0,
+    "name": "Dino going to the moon!",
+    "base_price": 250.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 1.5453318117180381,
+    "average": 250.0
+  },
+  {
+    "count": 707,
+    "total": 28545.32,
+    "name": "P4A 2022 T-Shirt",
+    "base_price": 35.0,
+    "raised_over_base": 3800.3199999999997,
+    "percentage_of_total": 1.4115837142934766,
+    "average": 40.375275813295616
+  },
+  {
+    "count": 150,
+    "total": 24205.55,
+    "name": "Nerdfighteria Crest Wall Hanging",
+    "base_price": 150.0,
+    "raised_over_base": 1705.5499999999993,
+    "percentage_of_total": 1.1969794059242098,
+    "average": 161.37033333333332
+  },
+  {
+    "count": 737,
+    "total": 20830.44,
+    "name": "P4A 2022 Pressed Pennies",
+    "base_price": 25.0,
+    "raised_over_base": 2405.4399999999987,
+    "percentage_of_total": 1.0300781306906843,
+    "average": 28.2638263229308
+  },
+  {
+    "count": 100,
+    "total": 20377.0,
+    "name": "More Glass Hanklerfish Art",
+    "base_price": 200.0,
+    "raised_over_base": 377.0,
+    "percentage_of_total": 1.0076552424761107,
+    "average": 203.77
+  },
+  {
+    "count": 19,
+    "total": 20000.0,
+    "name": "Sarah's Collage Art Poems",
+    "base_price": 1000.0,
+    "raised_over_base": 1000.0,
+    "percentage_of_total": 0.9890123594995445,
+    "average": 1052.6315789473683
+  },
+  {
+    "count": 20,
+    "total": 20000.0,
+    "name": "Dino to the James Webb telescope!",
+    "base_price": 1000.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.9890123594995445,
+    "average": 1000.0
+  },
+  {
+    "count": 180,
+    "total": 17992.0,
+    "name": "Signed John Green Book",
+    "base_price": 80.0,
+    "raised_over_base": 3592.0,
+    "percentage_of_total": 0.88971551860579,
+    "average": 99.95555555555555
+  },
+  {
+    "count": 595,
+    "total": 17328.22,
+    "name": "P4A 2022 Enamel Pin",
+    "base_price": 25.0,
+    "raised_over_base": 2453.220000000001,
+    "percentage_of_total": 0.8568911874063598,
+    "average": 29.123058823529412
+  },
+  {
+    "count": 331,
+    "total": 16494.48,
+    "name": "More Nerdfighter Art",
+    "base_price": 45.0,
+    "raised_over_base": 1599.4799999999996,
+    "percentage_of_total": 0.8156622291759021,
+    "average": 49.83226586102719
+  },
+  {
+    "count": 200,
+    "total": 15822.22,
+    "name": "Star Wars Collage by Sarah PRINT",
+    "base_price": 75.0,
+    "raised_over_base": 822.2199999999993,
+    "percentage_of_total": 0.7824185567360441,
+    "average": 79.1111
+  },
+  {
+    "count": 17,
+    "total": 15500.0,
+    "name": "Architectual Mash-Up Collage by Sarah",
+    "base_price": 900.0,
+    "raised_over_base": 200.0,
+    "percentage_of_total": 0.7664845786121469,
+    "average": 911.7647058823529
+  },
+  {
+    "count": 330,
+    "total": 15201.35,
+    "name": "Nerdfighter Art",
+    "base_price": 45.0,
+    "raised_over_base": 351.35000000000036,
+    "percentage_of_total": 0.7517161515539199,
+    "average": 46.06469696969697
+  },
+  {
+    "count": 100,
+    "total": 15020.0,
+    "name": "Glass Hanklerfish Art",
+    "base_price": 150.0,
+    "raised_over_base": 20.0,
+    "percentage_of_total": 0.7427482819841579,
+    "average": 150.2
+  },
+  {
+    "count": 150,
+    "total": 15020.0,
+    "name": "Character we mail to you! (Destin's stream)",
+    "base_price": 100.0,
+    "raised_over_base": 20.0,
+    "percentage_of_total": 0.7427482819841579,
+    "average": 100.13333333333334
+  },
+  {
+    "count": 749,
+    "total": 14807.12,
+    "name": "Exclusive Dear Hank & John",
+    "base_price": 15.0,
+    "raised_over_base": 3572.120000000001,
+    "percentage_of_total": 0.7322212344296447,
+    "average": 19.769185580774366
+  },
+  {
+    "count": 1043,
+    "total": 14690.47,
+    "name": "P4A 2022 Sticker",
+    "base_price": 10.0,
+    "raised_over_base": 4260.469999999999,
+    "percentage_of_total": 0.7264528198428636,
+    "average": 14.084822627037392
+  },
+  {
+    "count": 28,
+    "total": 14178.03,
+    "name": "Dino going to mars!",
+    "base_price": 500.0,
+    "raised_over_base": 178.03000000000065,
+    "percentage_of_total": 0.7011123451677662,
+    "average": 506.3582142857143
+  },
+  {
+    "count": 50,
+    "total": 12653.28,
+    "name": "Trivia night with Hank: July 14th",
+    "base_price": 250.0,
+    "raised_over_base": 153.28000000000065,
+    "percentage_of_total": 0.6257125154104198,
+    "average": 253.06560000000002
+  },
+  {
+    "count": 250,
+    "total": 12570.32,
+    "name": "Woodblock Nerdfighteria Print (B&W)",
+    "base_price": 45.0,
+    "raised_over_base": 1320.3199999999997,
+    "percentage_of_total": 0.6216100921432156,
+    "average": 50.281279999999995
+  },
+  {
+    "count": 584,
+    "total": 12074.39,
+    "name": "\"We're Here Because We're Here\" postcards",
+    "base_price": 17.0,
+    "raised_over_base": 2146.3899999999994,
+    "percentage_of_total": 0.5970860471708851,
+    "average": 20.67532534246575
+  },
+  {
+    "count": 689,
+    "total": 11874.1,
+    "name": "John's Tiktok Drafts!",
+    "base_price": 15.0,
+    "raised_over_base": 1539.1000000000004,
+    "percentage_of_total": 0.587181582896677,
+    "average": 17.233817126269958
+  },
+  {
+    "count": 45,
+    "total": 11250.0,
+    "name": "Trivia night with John and Stan: June 6th",
+    "base_price": 250.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.5563194522184938,
+    "average": 250.0
+  },
+  {
+    "count": 100,
+    "total": 10342.0,
+    "name": "Signed Hank Green book",
+    "base_price": 100.0,
+    "raised_over_base": 342.0,
+    "percentage_of_total": 0.5114182910972144,
+    "average": 103.42
+  },
+  {
+    "count": 49,
+    "total": 10311.0,
+    "name": "Life's Library Bundle!",
+    "base_price": 200.0,
+    "raised_over_base": 511.0,
+    "percentage_of_total": 0.50988532193999,
+    "average": 210.42857142857142
+  },
+  {
+    "count": 100,
+    "total": 10200.0,
+    "name": "Hanklerfish Art on Canvas",
+    "base_price": 100.0,
+    "raised_over_base": 200.0,
+    "percentage_of_total": 0.5043963033447676,
+    "average": 102.0
+  },
+  {
+    "count": 38,
+    "total": 9500.0,
+    "name": "Trivia night with John and Stan: May 25th",
+    "base_price": 250.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.4697808707622836,
+    "average": 250.0
+  },
+  {
+    "count": 37,
+    "total": 9250.0,
+    "name": "Trivia night with Hank: April 20th",
+    "base_price": 250.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.45741821626853923,
+    "average": 250.0
+  },
+  {
+    "count": 10,
+    "total": 9200.0,
+    "name": "Sydney Green art perk!",
+    "base_price": 500.0,
+    "raised_over_base": 4200.0,
+    "percentage_of_total": 0.4549456853697904,
+    "average": 920.0
+  },
+  {
+    "count": 449,
+    "total": 9093.59,
+    "name": "Hank's TikTok drafts part 2",
+    "base_price": 18.0,
+    "raised_over_base": 1011.5900000000001,
+    "percentage_of_total": 0.4496836451110731,
+    "average": 20.252984409799556
+  },
+  {
+    "count": 468,
+    "total": 9018.84,
+    "name": "John's Cookbook Part 2",
+    "base_price": 15.0,
+    "raised_over_base": 1998.8400000000001,
+    "percentage_of_total": 0.4459872114174436,
+    "average": 19.27102564102564
+  },
+  {
+    "count": 30,
+    "total": 7505.0,
+    "name": "More Dino going to the moon!",
+    "base_price": 250.0,
+    "raised_over_base": 5.0,
+    "percentage_of_total": 0.37112688790220405,
+    "average": 250.16666666666666
+  },
+  {
+    "count": 611,
+    "total": 7237.01,
+    "name": "John & Sarah's Podcast \"Like Letters\"",
+    "base_price": 8.0,
+    "raised_over_base": 2349.01,
+    "percentage_of_total": 0.3578746167910899,
+    "average": 11.844533551554829
+  },
+  {
+    "count": 9,
+    "total": 7200.0,
+    "name": "Star Wars Collage by Sarah",
+    "base_price": 800.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.356044449419836,
+    "average": 800.0
+  },
+  {
+    "count": 7,
+    "total": 7000.0,
+    "name": "More! Dino to the James Webb telescope",
+    "base_price": 1000.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.3461543258248405,
+    "average": 1000.0
+  },
+  {
+    "count": 10,
+    "total": 6400.0,
+    "name": "More Sydney Green art perk",
+    "base_price": 600.0,
+    "raised_over_base": 400.0,
+    "percentage_of_total": 0.31648395503985416,
+    "average": 640.0
+  },
+  {
+    "count": 118,
+    "total": 6325.0,
+    "name": "SciShow Finds Mystery Fossil",
+    "base_price": 50.0,
+    "raised_over_base": 425.0,
+    "percentage_of_total": 0.3127751586917309,
+    "average": 53.601694915254235
+  },
+  {
+    "count": 24,
+    "total": 6300.0,
+    "name": "Trivia night with John and Stan: June 1st",
+    "base_price": 250.0,
+    "raised_over_base": 300.0,
+    "percentage_of_total": 0.31153889324235645,
+    "average": 262.5
+  },
+  {
+    "count": 90,
+    "total": 6220.0,
+    "name": "Kurzgesagt 2022 Calendar",
+    "base_price": 45.0,
+    "raised_over_base": 2170.0,
+    "percentage_of_total": 0.3075828438043583,
+    "average": 69.11111111111111
+  },
+  {
+    "count": 15,
+    "total": 5900.0,
+    "name": "Dear Hank & John Personal Message",
+    "base_price": 350.0,
+    "raised_over_base": 650.0,
+    "percentage_of_total": 0.29175864605236557,
+    "average": 393.3333333333333
+  },
+  {
+    "count": 36,
+    "total": 5550.0,
+    "name": "SciShow Tangents Trivia Night!",
+    "base_price": 150.0,
+    "raised_over_base": 150.0,
+    "percentage_of_total": 0.27445092976112356,
+    "average": 154.16666666666666
+  },
+  {
+    "count": 25,
+    "total": 5300.0,
+    "name": "More Nerdfighter Crest Wall Hangings",
+    "base_price": 200.0,
+    "raised_over_base": 300.0,
+    "percentage_of_total": 0.2620882752673792,
+    "average": 212.0
+  },
+  {
+    "count": 19,
+    "total": 5265.15,
+    "name": "3D frog made by Henry Green",
+    "base_price": 250.0,
+    "raised_over_base": 515.1499999999996,
+    "percentage_of_total": 0.2603649212309513,
+    "average": 277.11315789473684
+  },
+  {
+    "count": 267,
+    "total": 5259.85,
+    "name": "Cocktails and Crostini with Sarah and John",
+    "base_price": 10.0,
+    "raised_over_base": 2589.8500000000004,
+    "percentage_of_total": 0.2601028329556839,
+    "average": 19.6998127340824
+  },
+  {
+    "count": 100,
+    "total": 5129.97,
+    "name": "Cosmic Bean/Pizza Mystery Print part 2",
+    "base_price": 50.0,
+    "raised_over_base": 129.97000000000025,
+    "percentage_of_total": 0.2536801866930939,
+    "average": 51.2997
+  },
+  {
+    "count": 233,
+    "total": 4917.84,
+    "name": "More Crank Green Coaster",
+    "base_price": 20.0,
+    "raised_over_base": 257.84000000000015,
+    "percentage_of_total": 0.24319022710206198,
+    "average": 21.106609442060087
+  },
+  {
+    "count": 251,
+    "total": 4785.78,
+    "name": "Dear Katherine and Sarah",
+    "base_price": 15.0,
+    "raised_over_base": 1020.7799999999997,
+    "percentage_of_total": 0.23665977849228642,
+    "average": 19.06685258964143
+  },
+  {
+    "count": 10,
+    "total": 4750.0,
+    "name": "Artwork by Alice Green",
+    "base_price": 250.0,
+    "raised_over_base": 2250.0,
+    "percentage_of_total": 0.2348904353811418,
+    "average": 475.0
+  },
+  {
+    "count": 10,
+    "total": 4600.0,
+    "name": "Animated Into Crash Course",
+    "base_price": 400.0,
+    "raised_over_base": 600.0,
+    "percentage_of_total": 0.2274728426848952,
+    "average": 460.0
+  },
+  {
+    "count": 430,
+    "total": 4533.48,
+    "name": "Pizza John x Anthropocene Reviewed Zine",
+    "base_price": 5.0,
+    "raised_over_base": 2383.4799999999996,
+    "percentage_of_total": 0.2241833875771997,
+    "average": 10.542976744186046
+  },
+  {
+    "count": 3,
+    "total": 4500.0,
+    "name": "Personalized book recommendations from John Green",
+    "base_price": 1500.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.22252778088739747,
+    "average": 1500.0
+  },
+  {
+    "count": 400,
+    "total": 4357.88,
+    "name": "Foam Hanklerfish Coin",
+    "base_price": 10.0,
+    "raised_over_base": 357.8800000000001,
+    "percentage_of_total": 0.21549985906079372,
+    "average": 10.8947
+  },
+  {
+    "count": 237,
+    "total": 4303.4,
+    "name": "Nerdfighter Coloring Pages!",
+    "base_price": 7.0,
+    "raised_over_base": 2644.3999999999996,
+    "percentage_of_total": 0.21280578939351694,
+    "average": 18.157805907172992
+  },
+  {
+    "count": 250,
+    "total": 4275.27,
+    "name": "Quincea\u00f1era Bunny Coaster",
+    "base_price": 15.0,
+    "raised_over_base": 525.2700000000004,
+    "percentage_of_total": 0.21141474350988088,
+    "average": 17.101080000000003
+  },
+  {
+    "count": 100,
+    "total": 4045.0,
+    "name": "Cosmic Bean/Pizza Mystery Print",
+    "base_price": 40.0,
+    "raised_over_base": 45.0,
+    "percentage_of_total": 0.20002774970878284,
+    "average": 40.45
+  },
+  {
+    "count": 10,
+    "total": 4000.0,
+    "name": "More Animated into Crash Course",
+    "base_price": 400.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.19780247189990888,
+    "average": 400.0
+  },
+  {
+    "count": 10,
+    "total": 4000.0,
+    "name": "Last Chance Dear Hank and John Personal Message",
+    "base_price": 400.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.19780247189990888,
+    "average": 400.0
+  },
+  {
+    "count": 250,
+    "total": 3861.76,
+    "name": "Crank Green Coaster",
+    "base_price": 15.0,
+    "raised_over_base": 111.76000000000022,
+    "percentage_of_total": 0.19096641847104803,
+    "average": 15.447040000000001
+  },
+  {
+    "count": 199,
+    "total": 3710.73,
+    "name": "Nerdfighter Cross stitch patterns",
+    "base_price": 15.0,
+    "raised_over_base": 725.73,
+    "percentage_of_total": 0.1834978916382872,
+    "average": 18.646884422110553
+  },
+  {
+    "count": 45,
+    "total": 3604.0,
+    "name": "Signed John Green foreign editions",
+    "base_price": 80.0,
+    "raised_over_base": 4.0,
+    "percentage_of_total": 0.1782200271818179,
+    "average": 80.08888888888889
+  },
+  {
+    "count": 200,
+    "total": 3301.11,
+    "name": "Pelican for Awesome Coaster",
+    "base_price": 15.0,
+    "raised_over_base": 301.1100000000001,
+    "percentage_of_total": 0.16324192950337704,
+    "average": 16.50555
+  },
+  {
+    "count": 98,
+    "total": 3255.0,
+    "name": "AART Annotated Manuscript DIGITAL",
+    "base_price": 30.0,
+    "raised_over_base": 315.0,
+    "percentage_of_total": 0.16096176150855085,
+    "average": 33.214285714285715
+  },
+  {
+    "count": 68,
+    "total": 3206.0,
+    "name": "Last batch of Nerdfighter Art",
+    "base_price": 45.0,
+    "raised_over_base": 146.0,
+    "percentage_of_total": 0.15853868122777695,
+    "average": 47.14705882352941
+  },
+  {
+    "count": 159,
+    "total": 2716.29,
+    "name": "P4A Penny passports",
+    "base_price": 15.0,
+    "raised_over_base": 331.28999999999996,
+    "percentage_of_total": 0.13432221909925088,
+    "average": 17.083584905660377
+  },
+  {
+    "count": 50,
+    "total": 2661.25,
+    "name": "P4A Recap Video Thank You",
+    "base_price": 50.0,
+    "raised_over_base": 161.25,
+    "percentage_of_total": 0.13160045708590812,
+    "average": 53.225
+  },
+  {
+    "count": 13,
+    "total": 2600.0,
+    "name": "Watch an AFC Wimbledon game with Nerdfighters!",
+    "base_price": 200.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.12857160673494075,
+    "average": 200.0
+  },
+  {
+    "count": 10,
+    "total": 2500.52,
+    "name": "Signed DFTBA shirts from John's collection",
+    "base_price": 250.0,
+    "raised_over_base": 0.5199999999999818,
+    "percentage_of_total": 0.12365225925879003,
+    "average": 250.052
+  },
+  {
+    "count": 145,
+    "total": 2494.0,
+    "name": "Journey to the Microcosmos Soundtrack Vol 1 and 2",
+    "base_price": 13.0,
+    "raised_over_base": 609.0,
+    "percentage_of_total": 0.12332984122959319,
+    "average": 17.2
+  },
+  {
+    "count": 75,
+    "total": 2442.0,
+    "name": "Sharpie from John Green's collection",
+    "base_price": 30.0,
+    "raised_over_base": 192.0,
+    "percentage_of_total": 0.12075840909489437,
+    "average": 32.56
+  },
+  {
+    "count": 24,
+    "total": 2400.3,
+    "name": "Sabrina's Frog Drawings!",
+    "base_price": 100.0,
+    "raised_over_base": 0.3000000000001819,
+    "percentage_of_total": 0.11869631832533782,
+    "average": 100.0125
+  },
+  {
+    "count": 25,
+    "total": 2360.0,
+    "name": "Woodblock Nerdfighteria Print (color)",
+    "base_price": 90.0,
+    "raised_over_base": 110.0,
+    "percentage_of_total": 0.11670345842094625,
+    "average": 94.4
+  },
+  {
+    "count": 35,
+    "total": 2261.0,
+    "name": "John Tiktok thanks!",
+    "base_price": 63.0,
+    "raised_over_base": 56.0,
+    "percentage_of_total": 0.1118078472414235,
+    "average": 64.6
+  },
+  {
+    "count": 42,
+    "total": 2181.0,
+    "name": "Hank Performs Your Tweet",
+    "base_price": 50.0,
+    "raised_over_base": 81.0,
+    "percentage_of_total": 0.10785179780342531,
+    "average": 51.92857142857143
+  },
+  {
+    "count": 50,
+    "total": 2080.0,
+    "name": "P4A Mystery Perk part 2",
+    "base_price": 40.0,
+    "raised_over_base": 80.0,
+    "percentage_of_total": 0.10285728538795261,
+    "average": 41.6
+  },
+  {
+    "count": 50,
+    "total": 2075.0,
+    "name": "P4A Mystery Perk",
+    "base_price": 40.0,
+    "raised_over_base": 75.0,
+    "percentage_of_total": 0.10261003229807772,
+    "average": 41.5
+  },
+  {
+    "count": 50,
+    "total": 2042.47,
+    "name": "Taylor Behnke Bat Art",
+    "base_price": 40.0,
+    "raised_over_base": 42.47000000000003,
+    "percentage_of_total": 0.10100140369535171,
+    "average": 40.8494
+  },
+  {
+    "count": 10,
+    "total": 2000.0,
+    "name": "A self care bunny illustration by Rosianna",
+    "base_price": 200.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.09890123594995444,
+    "average": 200.0
+  },
+  {
+    "count": 31,
+    "total": 1900.0,
+    "name": "Hank thanks!",
+    "base_price": 60.0,
+    "raised_over_base": 40.0,
+    "percentage_of_total": 0.09395617415245672,
+    "average": 61.29032258064516
+  },
+  {
+    "count": 86,
+    "total": 1871.82,
+    "name": "Dadcast with Hank & Travis!",
+    "base_price": 12.0,
+    "raised_over_base": 839.8199999999999,
+    "percentage_of_total": 0.09256265573792186,
+    "average": 21.765348837209302
+  },
+  {
+    "count": 122,
+    "total": 1803.0,
+    "name": "Part of a John + Sarah Green Story",
+    "base_price": 12.0,
+    "raised_over_base": 339.0,
+    "percentage_of_total": 0.08915946420888392,
+    "average": 14.778688524590164
+  },
+  {
+    "count": 75,
+    "total": 1620.0,
+    "name": "More Pelican for Awesome Coaster",
+    "base_price": 20.0,
+    "raised_over_base": 120.0,
+    "percentage_of_total": 0.08011000111946309,
+    "average": 21.6
+  },
+  {
+    "count": 37,
+    "total": 1600.0,
+    "name": "Super Carlin Brothers Signed Poster",
+    "base_price": 25.0,
+    "raised_over_base": 675.0,
+    "percentage_of_total": 0.07912098875996354,
+    "average": 43.24324324324324
+  },
+  {
+    "count": 100,
+    "total": 1571.0,
+    "name": "Hank's confetti!",
+    "base_price": 15.0,
+    "raised_over_base": 71.0,
+    "percentage_of_total": 0.07768692083868921,
+    "average": 15.71
+  },
+  {
+    "count": 20,
+    "total": 1505.0,
+    "name": "Tak Board Game Bundle",
+    "base_price": 75.0,
+    "raised_over_base": 5.0,
+    "percentage_of_total": 0.07442318005234072,
+    "average": 75.25
+  },
+  {
+    "count": 10,
+    "total": 1500.0,
+    "name": "Book from John Green's library\u2014last chance",
+    "base_price": 150.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.07417592696246582,
+    "average": 150.0
+  },
+  {
+    "count": 15,
+    "total": 1500.0,
+    "name": "Crash Course Mystery Prop",
+    "base_price": 100.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.07417592696246582,
+    "average": 100.0
+  },
+  {
+    "count": 57,
+    "total": 1465.0,
+    "name": "P4A 2022 Poster!",
+    "base_price": 25.0,
+    "raised_over_base": 40.0,
+    "percentage_of_total": 0.07244515533334163,
+    "average": 25.70175438596491
+  },
+  {
+    "count": 40,
+    "total": 1270.0,
+    "name": "Quincea\u00f1era Pooh Print",
+    "base_price": 30.0,
+    "raised_over_base": 70.0,
+    "percentage_of_total": 0.06280228482822106,
+    "average": 31.75
+  },
+  {
+    "count": 14,
+    "total": 1200.0,
+    "name": "A Virtual Show with Mentalist Mark Gibson",
+    "base_price": 80.0,
+    "raised_over_base": 80.0,
+    "percentage_of_total": 0.05934074156997266,
+    "average": 85.71428571428571
+  },
+  {
+    "count": 28,
+    "total": 1160.0,
+    "name": "Kitty Time Drawings",
+    "base_price": 40.0,
+    "raised_over_base": 40.0,
+    "percentage_of_total": 0.05736271685097357,
+    "average": 41.42857142857143
+  },
+  {
+    "count": 100,
+    "total": 1105.76,
+    "name": "Beanie Sandfurbs vs. Crank Green postcards",
+    "base_price": 10.0,
+    "raised_over_base": 105.75999999999999,
+    "percentage_of_total": 0.05468051533201081,
+    "average": 11.0576
+  },
+  {
+    "count": 70,
+    "total": 1081.01,
+    "name": "P4A Digital Wallpapers!",
+    "base_price": 6.0,
+    "raised_over_base": 661.01,
+    "percentage_of_total": 0.05345661253713012,
+    "average": 15.443
+  },
+  {
+    "count": 31,
+    "total": 1060.18,
+    "name": "Digital Nerdfighter Art bundle",
+    "base_price": 30.0,
+    "raised_over_base": 130.18000000000006,
+    "percentage_of_total": 0.05242655616471135,
+    "average": 34.19935483870968
+  },
+  {
+    "count": 25,
+    "total": 1030.0,
+    "name": "Pride ornament hats set",
+    "base_price": 40.0,
+    "raised_over_base": 30.0,
+    "percentage_of_total": 0.050934136514226534,
+    "average": 41.2
+  },
+  {
+    "count": 30,
+    "total": 1030.0,
+    "name": "Hello from the Magic Tavern signed posters",
+    "base_price": 30.0,
+    "raised_over_base": 130.0,
+    "percentage_of_total": 0.050934136514226534,
+    "average": 34.333333333333336
+  },
+  {
+    "count": 5,
+    "total": 1000.0,
+    "name": "Zoom call with Dr. Aaron Carroll of HCT",
+    "base_price": 200.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.04945061797497722,
+    "average": 200.0
+  },
+  {
+    "count": 10,
+    "total": 1000.0,
+    "name": "A book from John Green's library",
+    "base_price": 100.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.04945061797497722,
+    "average": 100.0
+  },
+  {
+    "count": 1,
+    "total": 900.0,
+    "name": "Another P4A Quilt",
+    "base_price": 900.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.0445055561774795,
+    "average": 900.0
+  },
+  {
+    "count": 1,
+    "total": 900.0,
+    "name": "P4A Quilt",
+    "base_price": 900.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.0445055561774795,
+    "average": 900.0
+  },
+  {
+    "count": 9,
+    "total": 900.0,
+    "name": "More! Character we mail to you!",
+    "base_price": 100.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.0445055561774795,
+    "average": 100.0
+  },
+  {
+    "count": 45,
+    "total": 865.0,
+    "name": "Pick a pride hat ornament!",
+    "base_price": 15.0,
+    "raised_over_base": 190.0,
+    "percentage_of_total": 0.042774784548355295,
+    "average": 19.22222222222222
+  },
+  {
+    "count": 50,
+    "total": 840.0,
+    "name": "Rainbow hat ornament",
+    "base_price": 15.0,
+    "raised_over_base": 90.0,
+    "percentage_of_total": 0.04153851909898087,
+    "average": 16.8
+  },
+  {
+    "count": 65,
+    "total": 798.0,
+    "name": "Hogwarts as Museum Podcast",
+    "base_price": 8.0,
+    "raised_over_base": 278.0,
+    "percentage_of_total": 0.03946159314403182,
+    "average": 12.276923076923078
+  },
+  {
+    "count": 10,
+    "total": 750.0,
+    "name": "A hand-drawn affirmation from Hannah Hart",
+    "base_price": 75.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.03708796348123291,
+    "average": 75.0
+  },
+  {
+    "count": 10,
+    "total": 750.0,
+    "name": "More Tak Bundles",
+    "base_price": 75.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.03708796348123291,
+    "average": 75.0
+  },
+  {
+    "count": 96,
+    "total": 723.0,
+    "name": "\"I wanna be a crab\" Song",
+    "base_price": 5.0,
+    "raised_over_base": 243.0,
+    "percentage_of_total": 0.03575279679590853,
+    "average": 7.53125
+  },
+  {
+    "count": 52,
+    "total": 692.0,
+    "name": "P4A Knitting Pattern",
+    "base_price": 11.0,
+    "raised_over_base": 120.0,
+    "percentage_of_total": 0.03421982763868423,
+    "average": 13.307692307692308
+  },
+  {
+    "count": 28,
+    "total": 683.7,
+    "name": "A short story about Winnie the Pooh",
+    "base_price": 20.0,
+    "raised_over_base": 123.70000000000005,
+    "percentage_of_total": 0.033809387509491924,
+    "average": 24.417857142857144
+  },
+  {
+    "count": 15,
+    "total": 680.0,
+    "name": "Animal Painting",
+    "base_price": 45.0,
+    "raised_over_base": 5.0,
+    "percentage_of_total": 0.03362642022298451,
+    "average": 45.333333333333336
+  },
+  {
+    "count": 10,
+    "total": 650.0,
+    "name": "More Animal Paintings",
+    "base_price": 65.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.03214290168373519,
+    "average": 65.0
+  },
+  {
+    "count": 61,
+    "total": 648.0,
+    "name": "Hank Tiktok Dances",
+    "base_price": 8.0,
+    "raised_over_base": 160.0,
+    "percentage_of_total": 0.032044000447785236,
+    "average": 10.62295081967213
+  },
+  {
+    "count": 52,
+    "total": 636.0,
+    "name": "A digital hand-drawn affirmation from Hannah Hart",
+    "base_price": 8.0,
+    "raised_over_base": 220.0,
+    "percentage_of_total": 0.03145059303208551,
+    "average": 12.23076923076923
+  },
+  {
+    "count": 2,
+    "total": 600.0,
+    "name": "A meteorite from Phil Plait",
+    "base_price": 300.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.02967037078498633,
+    "average": 300.0
+  },
+  {
+    "count": 24,
+    "total": 600.0,
+    "name": "Painted dinosaur by Kallie and Blake!",
+    "base_price": 25.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.02967037078498633,
+    "average": 25.0
+  },
+  {
+    "count": 3,
+    "total": 600.0,
+    "name": "A tarot reading by Rosianna",
+    "base_price": 200.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.02967037078498633,
+    "average": 200.0
+  },
+  {
+    "count": 46,
+    "total": 555.0,
+    "name": "Baby-Sitters Club podcast with John and Rosianna",
+    "base_price": 10.0,
+    "raised_over_base": 95.0,
+    "percentage_of_total": 0.027445092976112355,
+    "average": 12.065217391304348
+  },
+  {
+    "count": 1,
+    "total": 500.0,
+    "name": "Lego construction by Joe Hanson",
+    "base_price": 500.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.02472530898748861,
+    "average": 500.0
+  },
+  {
+    "count": 5,
+    "total": 500.0,
+    "name": "Personal Thank you video from Brennan Lee Mulligan",
+    "base_price": 100.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.02472530898748861,
+    "average": 100.0
+  },
+  {
+    "count": 5,
+    "total": 500.0,
+    "name": "Quilt pillows",
+    "base_price": 100.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.02472530898748861,
+    "average": 100.0
+  },
+  {
+    "count": 2,
+    "total": 500.0,
+    "name": "3D Dinosaur Painting by Kallie and Blake!",
+    "base_price": 250.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.02472530898748861,
+    "average": 250.0
+  },
+  {
+    "count": 10,
+    "total": 500.0,
+    "name": "Taylor Behnke Bat Art",
+    "base_price": 50.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.02472530898748861,
+    "average": 50.0
+  },
+  {
+    "count": 10,
+    "total": 500.0,
+    "name": "More Taylor Behnke Bat Art",
+    "base_price": 50.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.02472530898748861,
+    "average": 50.0
+  },
+  {
+    "count": 5,
+    "total": 500.0,
+    "name": "Mamrie Hart and Grace Helbig Personalized video",
+    "base_price": 100.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.02472530898748861,
+    "average": 100.0
+  },
+  {
+    "count": 6,
+    "total": 450.0,
+    "name": "Signed Thanos Infinity Stone Funko (SCB prop!)",
+    "base_price": 50.0,
+    "raised_over_base": 150.0,
+    "percentage_of_total": 0.02225277808873975,
+    "average": 75.0
+  },
+  {
+    "count": 8,
+    "total": 426.0,
+    "name": "Crash Course Signed Script",
+    "base_price": 50.0,
+    "raised_over_base": 26.0,
+    "percentage_of_total": 0.021065963257340295,
+    "average": 53.25
+  },
+  {
+    "count": 10,
+    "total": 402.0,
+    "name": "Club Crochet Memberships",
+    "base_price": 30.0,
+    "raised_over_base": 102.0,
+    "percentage_of_total": 0.019879148425940844,
+    "average": 40.2
+  },
+  {
+    "count": 30,
+    "total": 378.0,
+    "name": "A Knight's Tale commentary",
+    "base_price": 8.0,
+    "raised_over_base": 138.0,
+    "percentage_of_total": 0.018692333594541387,
+    "average": 12.6
+  },
+  {
+    "count": 3,
+    "total": 375.0,
+    "name": "Custom painting made by Cheyenne Barton",
+    "base_price": 125.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.018543981740616455,
+    "average": 125.0
+  },
+  {
+    "count": 1,
+    "total": 350.0,
+    "name": "Signed Iron Man Helmet (SCB prop!)",
+    "base_price": 350.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.017307716291242024,
+    "average": 350.0
+  },
+  {
+    "count": 1,
+    "total": 350.0,
+    "name": "Tak Board Game Posh Bundle",
+    "base_price": 350.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.017307716291242024,
+    "average": 350.0
+  },
+  {
+    "count": 1,
+    "total": 300.0,
+    "name": "Wrap Gift dice set from Escape from the Bloodkeep",
+    "base_price": 300.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.014835185392493165,
+    "average": 300.0
+  },
+  {
+    "count": 3,
+    "total": 300.0,
+    "name": "A private zoom chat with Danielle Bainbridge",
+    "base_price": 100.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.014835185392493165,
+    "average": 100.0
+  },
+  {
+    "count": 1,
+    "total": 300.0,
+    "name": "Quincea\u00f1era Bunny Drawing",
+    "base_price": 300.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.014835185392493165,
+    "average": 300.0
+  },
+  {
+    "count": 10,
+    "total": 300.0,
+    "name": "Physics girl postcard signed",
+    "base_price": 25.0,
+    "raised_over_base": 50.0,
+    "percentage_of_total": 0.014835185392493165,
+    "average": 30.0
+  },
+  {
+    "count": 1,
+    "total": 300.0,
+    "name": "Self Care Bunny Drawing",
+    "base_price": 300.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.014835185392493165,
+    "average": 300.0
+  },
+  {
+    "count": 1,
+    "total": 300.0,
+    "name": "Signed Mj\u00f6lnir, Thor\u2019s Hammer (SCB prop!)",
+    "base_price": 300.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.014835185392493165,
+    "average": 300.0
+  },
+  {
+    "count": 1,
+    "total": 300.0,
+    "name": "Quincea\u00f1era Pooh Drawing",
+    "base_price": 300.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.014835185392493165,
+    "average": 300.0
+  },
+  {
+    "count": 5,
+    "total": 300.0,
+    "name": "A personalized podcast by Andrew & Rob",
+    "base_price": 50.0,
+    "raised_over_base": 50.0,
+    "percentage_of_total": 0.014835185392493165,
+    "average": 60.0
+  },
+  {
+    "count": 1,
+    "total": 300.0,
+    "name": "Signed Storm Trooper Helmet (SCB prop!)",
+    "base_price": 300.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.014835185392493165,
+    "average": 300.0
+  },
+  {
+    "count": 6,
+    "total": 260.0,
+    "name": "Signed copy Bad Food Bible by Dr. Aaron Carroll",
+    "base_price": 40.0,
+    "raised_over_base": 20.0,
+    "percentage_of_total": 0.012857160673494076,
+    "average": 43.333333333333336
+  },
+  {
+    "count": 22,
+    "total": 260.0,
+    "name": "Super Carlin Brothers Podcast!",
+    "base_price": 8.0,
+    "raised_over_base": 84.0,
+    "percentage_of_total": 0.012857160673494076,
+    "average": 11.818181818181818
+  },
+  {
+    "count": 1,
+    "total": 250.0,
+    "name": "Hedwig Large Funko Pop",
+    "base_price": 250.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.012362654493744305,
+    "average": 250.0
+  },
+  {
+    "count": 1,
+    "total": 250.0,
+    "name": "Unmade Podcast Collectibles",
+    "base_price": 250.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.012362654493744305,
+    "average": 250.0
+  },
+  {
+    "count": 3,
+    "total": 225.0,
+    "name": "This Star Won't Go Out-themed clutch\u2014last chance!",
+    "base_price": 75.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.011126389044369875,
+    "average": 75.0
+  },
+  {
+    "count": 5,
+    "total": 225.0,
+    "name": "More Dinosaur Bundle Amigurumi Crochet Kits",
+    "base_price": 45.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.011126389044369875,
+    "average": 45.0
+  },
+  {
+    "count": 5,
+    "total": 200.0,
+    "name": "Signed Rhett & Link Plushies",
+    "base_price": 40.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.009890123594995442,
+    "average": 40.0
+  },
+  {
+    "count": 5,
+    "total": 185.0,
+    "name": "Signed copies of Josh Sundquist's book",
+    "base_price": 35.0,
+    "raised_over_base": 10.0,
+    "percentage_of_total": 0.009148364325370787,
+    "average": 37.0
+  },
+  {
+    "count": 5,
+    "total": 180.0,
+    "name": "Mythical Musical Combs signed",
+    "base_price": 20.0,
+    "raised_over_base": 80.0,
+    "percentage_of_total": 0.008901111235495899,
+    "average": 36.0
+  },
+  {
+    "count": 5,
+    "total": 170.0,
+    "name": "Truth of the Devine by Lindsay Ellis- signed",
+    "base_price": 30.0,
+    "raised_over_base": 20.0,
+    "percentage_of_total": 0.008406605055746127,
+    "average": 34.0
+  },
+  {
+    "count": 15,
+    "total": 167.0,
+    "name": "Craig and Joe Jurassic Park commentary",
+    "base_price": 8.0,
+    "raised_over_base": 47.0,
+    "percentage_of_total": 0.008258253201821195,
+    "average": 11.133333333333333
+  },
+  {
+    "count": 4,
+    "total": 160.0,
+    "name": "Physics girl plushie signed",
+    "base_price": 40.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.007912098875996355,
+    "average": 40.0
+  },
+  {
+    "count": 3,
+    "total": 150.0,
+    "name": "Cheyenne Barton Stationary Bundle",
+    "base_price": 50.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.007417592696246583,
+    "average": 50.0
+  },
+  {
+    "count": 3,
+    "total": 150.0,
+    "name": "This Star Won't Go Out-themed clutch/wallet",
+    "base_price": 50.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.007417592696246583,
+    "average": 50.0
+  },
+  {
+    "count": 5,
+    "total": 150.0,
+    "name": "Mythical Rubiks Cubes signed",
+    "base_price": 30.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.007417592696246583,
+    "average": 30.0
+  },
+  {
+    "count": 1,
+    "total": 150.0,
+    "name": "Signed Tesseract (SCB prop!)",
+    "base_price": 150.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.007417592696246583,
+    "average": 150.0
+  },
+  {
+    "count": 1,
+    "total": 150.0,
+    "name": "Signed Monster Book of Monsters (SCB prop!)",
+    "base_price": 150.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.007417592696246583,
+    "average": 150.0
+  },
+  {
+    "count": 1,
+    "total": 150.0,
+    "name": "Dimension 20 Wyrmwood Dice Tray - Signed",
+    "base_price": 150.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.007417592696246583,
+    "average": 150.0
+  },
+  {
+    "count": 2,
+    "total": 150.0,
+    "name": "Painted 3D stegosaurs by Kallie and Blake",
+    "base_price": 75.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.007417592696246583,
+    "average": 75.0
+  },
+  {
+    "count": 5,
+    "total": 125.0,
+    "name": "GMM Heat-Activated Mugs Signed",
+    "base_price": 25.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.006181327246872152,
+    "average": 25.0
+  },
+  {
+    "count": 5,
+    "total": 125.0,
+    "name": "Bad Kid Enamel Pins from Dimension 20 - signed",
+    "base_price": 25.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.006181327246872152,
+    "average": 25.0
+  },
+  {
+    "count": 5,
+    "total": 125.0,
+    "name": "GMM 10th Anniversary Mug signed",
+    "base_price": 25.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.006181327246872152,
+    "average": 25.0
+  },
+  {
+    "count": 5,
+    "total": 125.0,
+    "name": "P4A Shirt Designed by ChoppA",
+    "base_price": 25.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.006181327246872152,
+    "average": 25.0
+  },
+  {
+    "count": 1,
+    "total": 120.0,
+    "name": "Under the Desk News Merch Pack!!",
+    "base_price": 120.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.005934074156997266,
+    "average": 120.0
+  },
+  {
+    "count": 3,
+    "total": 105.0,
+    "name": "Dinosaur Bundle Amigurumi Crochet Kits",
+    "base_price": 35.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.0051923148873726085,
+    "average": 35.0
+  },
+  {
+    "count": 1,
+    "total": 100.0,
+    "name": "Dimension 20 Wyrmwood Dice Vault - Signed",
+    "base_price": 100.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.004945061797497721,
+    "average": 100.0
+  },
+  {
+    "count": 1,
+    "total": 100.0,
+    "name": "Hannah Hart personalized hand drawn affirmation",
+    "base_price": 100.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.004945061797497721,
+    "average": 100.0
+  },
+  {
+    "count": 3,
+    "total": 90.0,
+    "name": "Signed copy of Christian Hull's \"Leave Me Alone\"",
+    "base_price": 30.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.004450555617747949,
+    "average": 30.0
+  },
+  {
+    "count": 5,
+    "total": 60.0,
+    "name": "Gift card to ClubCrochet.com",
+    "base_price": 10.0,
+    "raised_over_base": 10.0,
+    "percentage_of_total": 0.002967037078498633,
+    "average": 12.0
+  },
+  {
+    "count": 1,
+    "total": 40.0,
+    "name": "Boggy Plush from Dimension 20 - Signed!",
+    "base_price": 40.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.0019780247189990887,
+    "average": 40.0
+  },
+  {
+    "count": 1,
+    "total": 30.0,
+    "name": "Dimension 20 Death's Avenged Mug - signed",
+    "base_price": 30.0,
+    "raised_over_base": 0.0,
+    "percentage_of_total": 0.0014835185392493165,
+    "average": 30.0
+  }
+];
+        let anonymousStatistics = [
+  {
+    "count": 32071,
+    "total": 1660211.18,
+    "who": "Other"
+  },
+  {
+    "count": 6557,
+    "total": 362008.24,
+    "who": "Anonymous"
+  }
+];
+        let decimalStatistics = [
+  {
+    "after_decimal": "00",
+    "amount": 37978
+  },
+  {
+    "after_decimal": "69",
+    "amount": 51
+  },
+  {
+    "after_decimal": "73",
+    "amount": 43
+  },
+  {
+    "after_decimal": "11",
+    "amount": 40
+  },
+  {
+    "after_decimal": "27",
+    "amount": 39
+  },
+  {
+    "after_decimal": "22",
+    "amount": 25
+  },
+  {
+    "after_decimal": "50",
+    "amount": 22
+  },
+  {
+    "after_decimal": "20",
+    "amount": 20
+  },
+  {
+    "after_decimal": "31",
+    "amount": 18
+  },
+  {
+    "after_decimal": "01",
+    "amount": 15
+  },
+  {
+    "after_decimal": "33",
+    "amount": 14
+  },
+  {
+    "after_decimal": "77",
+    "amount": 13
+  },
+  {
+    "after_decimal": "42",
+    "amount": 12
+  },
+  {
+    "after_decimal": "80",
+    "amount": 11
+  },
+  {
+    "after_decimal": "99",
+    "amount": 10
+  },
+  {
+    "after_decimal": "78",
+    "amount": 9
+  },
+  {
+    "after_decimal": "09",
+    "amount": 9
+  },
+  {
+    "after_decimal": "05",
+    "amount": 8
+  },
+  {
+    "after_decimal": "89",
+    "amount": 8
+  },
+  {
+    "after_decimal": "34",
+    "amount": 8
+  },
+  {
+    "after_decimal": "88",
+    "amount": 8
+  },
+  {
+    "after_decimal": "23",
+    "amount": 8
+  },
+  {
+    "after_decimal": "28",
+    "amount": 8
+  },
+  {
+    "after_decimal": "03",
+    "amount": 7
+  },
+  {
+    "after_decimal": "25",
+    "amount": 7
+  },
+  {
+    "after_decimal": "18",
+    "amount": 7
+  },
+  {
+    "after_decimal": "58",
+    "amount": 7
+  },
+  {
+    "after_decimal": "55",
+    "amount": 7
+  },
+  {
+    "after_decimal": "66",
+    "amount": 6
+  },
+  {
+    "after_decimal": "48",
+    "amount": 6
+  },
+  {
+    "after_decimal": "51",
+    "amount": 6
+  },
+  {
+    "after_decimal": "56",
+    "amount": 6
+  },
+  {
+    "after_decimal": "32",
+    "amount": 6
+  },
+  {
+    "after_decimal": "13",
+    "amount": 6
+  },
+  {
+    "after_decimal": "45",
+    "amount": 6
+  },
+  {
+    "after_decimal": "83",
+    "amount": 5
+  },
+  {
+    "after_decimal": "68",
+    "amount": 5
+  },
+  {
+    "after_decimal": "10",
+    "amount": 5
+  },
+  {
+    "after_decimal": "49",
+    "amount": 5
+  },
+  {
+    "after_decimal": "86",
+    "amount": 5
+  },
+  {
+    "after_decimal": "47",
+    "amount": 5
+  },
+  {
+    "after_decimal": "15",
+    "amount": 5
+  },
+  {
+    "after_decimal": "17",
+    "amount": 5
+  },
+  {
+    "after_decimal": "06",
+    "amount": 5
+  },
+  {
+    "after_decimal": "40",
+    "amount": 5
+  },
+  {
+    "after_decimal": "30",
+    "amount": 5
+  },
+  {
+    "after_decimal": "44",
+    "amount": 4
+  },
+  {
+    "after_decimal": "12",
+    "amount": 4
+  },
+  {
+    "after_decimal": "67",
+    "amount": 4
+  },
+  {
+    "after_decimal": "62",
+    "amount": 4
+  },
+  {
+    "after_decimal": "57",
+    "amount": 4
+  },
+  {
+    "after_decimal": "59",
+    "amount": 4
+  },
+  {
+    "after_decimal": "46",
+    "amount": 4
+  },
+  {
+    "after_decimal": "97",
+    "amount": 4
+  },
+  {
+    "after_decimal": "38",
+    "amount": 4
+  },
+  {
+    "after_decimal": "65",
+    "amount": 3
+  },
+  {
+    "after_decimal": "02",
+    "amount": 3
+  },
+  {
+    "after_decimal": "81",
+    "amount": 3
+  },
+  {
+    "after_decimal": "96",
+    "amount": 3
+  },
+  {
+    "after_decimal": "14",
+    "amount": 3
+  },
+  {
+    "after_decimal": "41",
+    "amount": 3
+  },
+  {
+    "after_decimal": "21",
+    "amount": 3
+  },
+  {
+    "after_decimal": "93",
+    "amount": 3
+  },
+  {
+    "after_decimal": "35",
+    "amount": 3
+  },
+  {
+    "after_decimal": "24",
+    "amount": 3
+  },
+  {
+    "after_decimal": "04",
+    "amount": 3
+  },
+  {
+    "after_decimal": "43",
+    "amount": 3
+  },
+  {
+    "after_decimal": "90",
+    "amount": 3
+  },
+  {
+    "after_decimal": "08",
+    "amount": 3
+  },
+  {
+    "after_decimal": "92",
+    "amount": 2
+  },
+  {
+    "after_decimal": "95",
+    "amount": 2
+  },
+  {
+    "after_decimal": "79",
+    "amount": 2
+  },
+  {
+    "after_decimal": "82",
+    "amount": 2
+  },
+  {
+    "after_decimal": "53",
+    "amount": 2
+  },
+  {
+    "after_decimal": "76",
+    "amount": 2
+  },
+  {
+    "after_decimal": "75",
+    "amount": 2
+  },
+  {
+    "after_decimal": "19",
+    "amount": 2
+  },
+  {
+    "after_decimal": "26",
+    "amount": 2
+  },
+  {
+    "after_decimal": "37",
+    "amount": 2
+  },
+  {
+    "after_decimal": "52",
+    "amount": 2
+  },
+  {
+    "after_decimal": "60",
+    "amount": 2
+  },
+  {
+    "after_decimal": "70",
+    "amount": 2
+  },
+  {
+    "after_decimal": "72",
+    "amount": 2
+  },
+  {
+    "after_decimal": "84",
+    "amount": 1
+  },
+  {
+    "after_decimal": "85",
+    "amount": 1
+  },
+  {
+    "after_decimal": "61",
+    "amount": 1
+  },
+  {
+    "after_decimal": "87",
+    "amount": 1
+  },
+  {
+    "after_decimal": "63",
+    "amount": 1
+  },
+  {
+    "after_decimal": "54",
+    "amount": 1
+  },
+  {
+    "after_decimal": "64",
+    "amount": 1
+  },
+  {
+    "after_decimal": "39",
+    "amount": 1
+  },
+  {
+    "after_decimal": "94",
+    "amount": 1
+  },
+  {
+    "after_decimal": "71",
+    "amount": 1
+  },
+  {
+    "after_decimal": "16",
+    "amount": 1
+  },
+  {
+    "after_decimal": "98",
+    "amount": 1
+  },
+  {
+    "after_decimal": "07",
+    "amount": 1
+  }
+];
+        let decimalWarStatistics = [
+  {
+    "after_decimal": "69",
+    "minutes": 4164.02,
+    "percentage_of_total": 41.29227132184216
+  },
+  {
+    "after_decimal": "01",
+    "minutes": 862.83,
+    "percentage_of_total": 8.556205413188472
+  },
+  {
+    "after_decimal": "30",
+    "minutes": 683.15,
+    "percentage_of_total": 6.774418747632447
+  },
+  {
+    "after_decimal": "42",
+    "minutes": 597.2,
+    "percentage_of_total": 5.922100382179753
+  },
+  {
+    "after_decimal": "10",
+    "minutes": 509.08,
+    "percentage_of_total": 5.0482633331548366
+  },
+  {
+    "after_decimal": "04",
+    "minutes": 315.6,
+    "percentage_of_total": 3.129629739812341
+  },
+  {
+    "after_decimal": "89",
+    "minutes": 275.4,
+    "percentage_of_total": 2.7309886893039246
+  },
+  {
+    "after_decimal": "19",
+    "minutes": 275.0,
+    "percentage_of_total": 2.7270221116869253
+  },
+  {
+    "after_decimal": "18",
+    "minutes": 274.88,
+    "percentage_of_total": 2.7258321384018256
+  },
+  {
+    "after_decimal": "00",
+    "minutes": 197.48,
+    "percentage_of_total": 1.9582993695124875
+  }
+];
+        let decimalWarStreamStatistics = [
+  {
+    "after_decimal": "69",
+    "minutes": 793.88,
+    "percentage_of_total": 27.571213247296296
+  },
+  {
+    "after_decimal": "42",
+    "minutes": 446.43,
+    "percentage_of_total": 15.504379415012954
+  },
+  {
+    "after_decimal": "19",
+    "minutes": 100.52,
+    "percentage_of_total": 3.4910293188116883
+  },
+  {
+    "after_decimal": "91",
+    "minutes": 97.83,
+    "percentage_of_total": 3.3976064291618333
+  },
+  {
+    "after_decimal": "00",
+    "minutes": 96.98,
+    "percentage_of_total": 3.368086185220429
+  },
+  {
+    "after_decimal": "89",
+    "minutes": 80.95,
+    "percentage_of_total": 2.811369114184304
+  },
+  {
+    "after_decimal": "57",
+    "minutes": 63.05,
+    "percentage_of_total": 2.1897075064770886
+  },
+  {
+    "after_decimal": "38",
+    "minutes": 57.82,
+    "percentage_of_total": 2.0080711819905672
+  },
+  {
+    "after_decimal": "80",
+    "minutes": 57.03,
+    "percentage_of_total": 1.980634719974439
+  },
+  {
+    "after_decimal": "11",
+    "minutes": 46.45,
+    "percentage_of_total": 1.6131945071508451
+  }
+];
+        let moneyFormatterParams = {"symbol": "$"};
+
+        function percentage(cell, formatterParams, onRendered) {
+            return Math.round(cell.getValue() * 100) / 100 + " %"
+        }
+
+        $(document).ready(function () {
+            $("#reward-statistics").tabulator({
+                data: rewardStatistics,
+                layout: "fitColumns",
+                height: 800,
+                columns: [
+                    {"title": "Reward name", "field": "name"},
+                    {"title": "Count", "field": "count", "width": 100},
+                    {
+                        "title": "Total raised", "field": "total", "formatter": "money",
+                        "formatterParams": moneyFormatterParams, "width": 200
+                    },
+                    {
+                        "title": "Raised over base price", "field": "raised_over_base", "formatter": "money",
+                        "formatterParams": moneyFormatterParams, "width": 200
+                    },
+                    {
+                        "title": "Percentage of total", "field": "percentage_of_total", "formatter": percentage,
+                        "width": 200
+                    },
+                    {
+                        "title": "Base price", "field": "base_price", "formatter": "money",
+                        "formatterParams": moneyFormatterParams, "width": 200
+                    },
+                    {
+                        "title": "Average donation", "field": "average", "formatter": "money",
+                        "formatterParams": moneyFormatterParams, "width": 200
+                    },
+                ]
+            });
+            $("#decimal-statistics").tabulator({
+                data: decimalStatistics,
+                layout: "fitColumns",
+                height: 800,
+                columns: [
+                    {"title": "After decimal", "field": "after_decimal"},
+                    {"title": "Amount", "field": "amount"},
+                ]
+            });
+            $("#anonymous-statistics").tabulator({
+                data: anonymousStatistics,
+                layout: "fitColumns",
+                columns: [
+                    {"title": "Who", "field": "who"},
+                    {"title": "Count", "field": "count", "width": 100},
+                    {
+                        "title": "Total raised", "field": "total", "formatter": "money",
+                        "formatterParams": moneyFormatterParams, "width": 200
+                    },
+                ]
+            });
+
+            let decimalWarColumns = [
+                {"title": "Total after decimal", "field": "after_decimal"},
+                {"title": "Minutes", "field": "minutes"},
+                {"title": "Percentage of total", "field": "percentage_of_total", "formatter": percentage},
+            ];
+            $("#decimal-war-statistics").tabulator({
+                data: decimalWarStatistics,
+                layout: "fitColumns",
+                columns: decimalWarColumns,
+            });
+            $("#decimal-war-stream-statistics").tabulator({
+                data: decimalWarStreamStatistics,
+                layout: "fitColumns",
+                columns: decimalWarColumns,
+            });
+        })
+
+    </script>
+
+    <title>Campaign&lt;155357, Project for Awesome 2022&gt;</title>
+
+    <style>
+        .tab-pane {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="rewards-tab" data-bs-toggle="tab" data-bs-target="#rewards-tab-pane"
+                type="button"
+                role="tab" aria-controls="rewards-tab-pane" aria-selected="true">
+            Reward statistics
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="anonymous-tab" data-bs-toggle="tab" data-bs-target="#anonymous-tab-pane"
+                type="button"
+                role="tab" aria-controls="anonymous-tab-pane" aria-selected="false">
+            Anonymous statistics
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="decimal-stats-tab" data-bs-toggle="tab" data-bs-target="#decimal-stats-tab-pane"
+                type="button"
+                role="tab" aria-controls="decimal-stats-tab-pane" aria-selected="false">
+            Decimal value statistics
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="decimal-war-tab" data-bs-toggle="tab" data-bs-target="#decimal-war-tab-pane"
+                type="button" role="tab" aria-controls="decimal-war-tab-pane" aria-selected="false">
+            Decimal war
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="polls-tab" data-bs-toggle="tab" data-bs-target="#polls-tab-pane"
+                type="button" role="tab" aria-controls="polls-tab-pane" aria-selected="false">
+            Polls
+        </button>
+    </li>
+    <li class="nav-item ms-auto" role="presentation">
+        <a class="nav-link" target="_blank" href="https://github.com/mikicz/p4a-portal">GitHub</a>
+    </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="rewards-tab-pane" role="tabpanel" aria-labelledby="rewards-tab"
+         tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Reward statistics</h2>
+                    <div style="max-width: 1500px">
+                        <table id="reward-statistics"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tab-pane fade" id="anonymous-tab-pane" role="tabpanel" aria-labelledby="anonymous-tab" tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Anonymous statistics</h2>
+                    <div style="max-width: 500px; margin: 0 auto;">
+                        <table id="anonymous-statistics"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="decimal-stats-tab-pane" role="tabpanel" aria-labelledby="decimal-stats-tab"
+         tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Decimal value statistics</h2>
+                    <div style="max-width: 500px; margin: 0 auto">
+                        <table id="decimal-statistics"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="decimal-war-tab-pane" role="tabpanel" aria-labelledby="decimal-war-tab" tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col"><h2>Decimal wars</h2></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>Overall</h3>
+                    <div style="max-width: 500px; margin-top: 50px">
+                        <table id="decimal-war-statistics"></table>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>During stream</h3>
+                    <div style="max-width: 500px; margin-top: 50px">
+                        <table id="decimal-war-stream-statistics"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="tab-pane fade" id="polls-tab-pane" role="tabpanel" aria-labelledby="polls-tab" tabindex="0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Polls</h2>
+                    <table class="table" style="max-width: 2000px; margin: 0 auto;">
+                        <thead>
+                        <tr>
+                            <th>Question</th>
+                            <th style="min-width: 190px">Created (UTC)</th>
+                            <th style="min-width: 190px">Finished (UTC)</th>
+                            <th style="min-width: 120px">Total raised</th>
+                            <th style="min-width: 250px">Option</th>
+                            <th style="min-width: 120px">Raised</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+                            <tr>
+                                <td rowspan="4">What should Ben and J talk about on their P4A Podcast?</td>
+                                <td rowspan="4">Feb. 24, 2022, 6:35 p.m.</td>
+                                <td rowspan="4">Feb. 26, 2022, 3:42 a.m.</td>
+                                <td rowspan="4">6701.31</td>
+                                
+                                    
+                                <td>Our Favorite Fandoms We Don’t Cover On SCB
+                                    </td>
+                                <td>
+                                    $608.58
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Live pitch every movie you’ve ever wanted to write
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $3,009.73
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>What’s On Your Bucket List?
+                                    </td>
+                                <td>
+                                    $2,461.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>GMA (Green Mallard Association) stories
+                                    </td>
+                                <td>
+                                    $622.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="4">How should we prank Ben before he gets back to the office?</td>
+                                <td rowspan="4">Feb. 24, 2022, 6:44 p.m.</td>
+                                <td rowspan="4">Feb. 26, 2022, 4:15 a.m.</td>
+                                <td rowspan="4">8182.00</td>
+                                
+                                    
+                                <td><strong>Tape desk supplies onto desk w/ googly eyes
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $3,442.00
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Change his computer backgrounds to Nicholas Cage
+                                    </td>
+                                <td>
+                                    $1,731.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Wrap his whole desk in foil and sticky notes
+                                    </td>
+                                <td>
+                                    $220.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Fill office with balloons and packing peanuts
+                                    </td>
+                                <td>
+                                    $2,789.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Which animal should do a novel painting?</td>
+                                <td rowspan="2">Feb. 24, 2022, 7:29 p.m.</td>
+                                <td rowspan="2">Feb. 27, 2022, 1:30 a.m.</td>
+                                <td rowspan="2">7779.37</td>
+                                
+                                    
+                                <td>Inky, the opossum
+                                    </td>
+                                <td>
+                                    $3,191.42
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Quincho, the armadillo
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $4,587.95
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="3">favorite food?</td>
+                                <td rowspan="3">Feb. 24, 2022, 8:40 p.m.</td>
+                                <td rowspan="3">Feb. 24, 2022, 8:41 p.m.</td>
+                                <td rowspan="3">0.00</td>
+                                
+                                    
+                                <td><strong>pizza
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $0.00
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>pizza
+                                    </td>
+                                <td>
+                                    $0.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>pizza
+                                    </td>
+                                <td>
+                                    $0.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="3">What color should Alice dye John&#x27;s hair?</td>
+                                <td rowspan="3">Feb. 25, 2022, 7:21 p.m.</td>
+                                <td rowspan="3">Feb. 25, 2022, 8 p.m.</td>
+                                <td rowspan="3">44921.27</td>
+                                
+                                    
+                                <td>Blue
+                                    </td>
+                                <td>
+                                    $7,514.97
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Silver
+                                    </td>
+                                <td>
+                                    $9,237.92
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Purple
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $28,168.38
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Was Hank a good crab?</td>
+                                <td rowspan="2">Feb. 25, 2022, 8:33 p.m.</td>
+                                <td rowspan="2">Feb. 25, 2022, 9:12 p.m.</td>
+                                <td rowspan="2">20072.28</td>
+                                
+                                    
+                                <td><strong>yes
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $17,880.58
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>no...
+                                    </td>
+                                <td>
+                                    $2,191.70
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Did Orin do a good crab walk?</td>
+                                <td rowspan="2">Feb. 25, 2022, 10:50 p.m.</td>
+                                <td rowspan="2">Feb. 25, 2022, 10:59 p.m.</td>
+                                <td rowspan="2">3574.77</td>
+                                
+                                    
+                                <td><strong>yes
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $3,509.77
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>no
+                                    </td>
+                                <td>
+                                    $65.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Should all bats have faces?</td>
+                                <td rowspan="2">Feb. 26, 2022, 1:17 a.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 1:51 a.m.</td>
+                                <td rowspan="2">9347.95</td>
+                                
+                                    
+                                <td><strong>Yes!
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $7,907.84
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>No
+                                    </td>
+                                <td>
+                                    $1,440.11
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Is pit legs??</td>
+                                <td rowspan="2">Feb. 26, 2022, 1:54 a.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 2:39 a.m.</td>
+                                <td rowspan="2">13040.67</td>
+                                
+                                    
+                                <td>Pit is legs
+                                    </td>
+                                <td>
+                                    $6,477.67
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Pit is not legs
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $6,563.00
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Eat it?</td>
+                                <td rowspan="2">Feb. 26, 2022, 2:40 a.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 3:01 a.m.</td>
+                                <td rowspan="2">5376.00</td>
+                                
+                                    
+                                <td>Eat it
+                                    </td>
+                                <td>
+                                    $1,987.68
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Don&#x27;t eat it
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $3,388.32
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Is the forehead part of the face?</td>
+                                <td rowspan="2">Feb. 26, 2022, 5:58 a.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 6:16 a.m.</td>
+                                <td rowspan="2">4883.66</td>
+                                
+                                    
+                                <td><strong>Yes
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $3,857.69
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>No
+                                    </td>
+                                <td>
+                                    $1,025.97
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">What cake should ChoppA make?</td>
+                                <td rowspan="2">Feb. 26, 2022, 8:06 a.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 8:30 a.m.</td>
+                                <td rowspan="2">1732.50</td>
+                                
+                                    
+                                <td><strong>Hank crab
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $1,323.50
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>P4A logo
+                                    </td>
+                                <td>
+                                    $409.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">What&#x27;s a good money goal?</td>
+                                <td rowspan="2">Feb. 26, 2022, 10:24 a.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 10:57 a.m.</td>
+                                <td rowspan="2">2211.88</td>
+                                
+                                    
+                                <td>$860,000.00
+                                    </td>
+                                <td>
+                                    $35.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>$888,888.88
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $2,176.88
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="3">Genre of Pooh?</td>
+                                <td rowspan="3">Feb. 26, 2022, 10:57 a.m.</td>
+                                <td rowspan="3">Nov. 3, 2022, 7:17 p.m.</td>
+                                <td rowspan="3">5219.85</td>
+                                
+                                    
+                                <td>Romance
+                                    </td>
+                                <td>
+                                    $319.22
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Sci-fi
+                                    </td>
+                                <td>
+                                    $2,428.55
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Murder mystery
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $2,472.08
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="4">Pick a costume for Pooh</td>
+                                <td rowspan="4">Feb. 26, 2022, 12:21 p.m.</td>
+                                <td rowspan="4">Feb. 26, 2022, 1 p.m.</td>
+                                <td rowspan="4">4065.09</td>
+                                
+                                    
+                                <td>superhero
+                                    </td>
+                                <td>
+                                    $1,231.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>royal
+                                    </td>
+                                <td>
+                                    $918.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>cloud
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $1,749.09
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>influencer
+                                    </td>
+                                <td>
+                                    $167.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">What kind of umbrella should Cloud Pooh have?</td>
+                                <td rowspan="2">Feb. 26, 2022, 1:09 p.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 1:15 p.m.</td>
+                                <td rowspan="2">1128.32</td>
+                                
+                                    
+                                <td><strong>Rainbow umbrella
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $1,023.32
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Reflective umbrella
+                                    </td>
+                                <td>
+                                    $105.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Can John shave the mustache?</td>
+                                <td rowspan="2">Feb. 26, 2022, 3:40 p.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 4:01 p.m.</td>
+                                <td rowspan="2">18445.59</td>
+                                
+                                    
+                                <td><strong>Yes
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $14,196.75
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>No
+                                    </td>
+                                <td>
+                                    $4,248.84
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Who is the better dino?</td>
+                                <td rowspan="2">Feb. 26, 2022, 5:25 p.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 5:50 p.m.</td>
+                                <td rowspan="2">4885.25</td>
+                                
+                                    
+                                <td>Dinosaur (Taylor&#x27;s version)
+                                    </td>
+                                <td>
+                                    $2,087.92
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Dinosaur (Darcy&#x27;s version)
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $2,797.33
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Who is the better crab?</td>
+                                <td rowspan="2">Feb. 26, 2022, 5:50 p.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 6:09 p.m.</td>
+                                <td rowspan="2">4050.49</td>
+                                
+                                    
+                                <td><strong>Crab (Taylor&#x27;s version)
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $2,296.00
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Crab (Hallease&#x27;s version)
+                                    </td>
+                                <td>
+                                    $1,754.49
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="5">You have to choose one:</td>
+                                <td rowspan="5">Feb. 26, 2022, 6 p.m.</td>
+                                <td rowspan="5">Feb. 26, 2022, 7:39 p.m.</td>
+                                <td rowspan="5">2104.00</td>
+                                
+                                    
+                                <td>Don&#x27;t have to use toilet butalways have tummy ache
+                                    </td>
+                                <td>
+                                    $91.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Ice cream is HEALTHY, but tastes like Robitussin
+                                    </td>
+                                <td>
+                                    $50.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>No coffee/tea, but you have time to nap everyday
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $1,514.62
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Internet is down, but TV is kinda better
+                                    </td>
+                                <td>
+                                    $81.38
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Dogs can talk but they’re boring and don’t shut up
+                                    </td>
+                                <td>
+                                    $367.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="5">If you had to have your mind trapped forever in a kitchen implement, which would you choose?</td>
+                                <td rowspan="5">Feb. 26, 2022, 6 p.m.</td>
+                                <td rowspan="5">Feb. 26, 2022, 7:46 p.m.</td>
+                                <td rowspan="5">1756.00</td>
+                                
+                                    
+                                <td>Toaster
+                                    </td>
+                                <td>
+                                    $378.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Kettle
+                                    </td>
+                                <td>
+                                    $553.73
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Oven
+                                    </td>
+                                <td>
+                                    $169.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Fridge
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $654.27
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Sink
+                                    </td>
+                                <td>
+                                    $1.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="5">Which is more awesome?</td>
+                                <td rowspan="5">Feb. 26, 2022, 6:02 p.m.</td>
+                                <td rowspan="5">Feb. 26, 2022, 7:28 p.m.</td>
+                                <td rowspan="5">2670.11</td>
+                                
+                                    
+                                <td>Saturn
+                                    </td>
+                                <td>
+                                    $263.87
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Back to the Future Hoverboard
+                                    </td>
+                                <td>
+                                    $109.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>A cat riding a roomba
+                                    </td>
+                                <td>
+                                    $945.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>John Green’s Mustache
+                                    </td>
+                                <td>
+                                    $208.45
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Hank Green’s dancing
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $1,143.79
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="5">What is the most interesting 30 day challenge I could do for a video?</td>
+                                <td rowspan="5">Feb. 26, 2022, 6:03 p.m.</td>
+                                <td rowspan="5">Feb. 26, 2022, 7:56 p.m.</td>
+                                <td rowspan="5">1926.69</td>
+                                
+                                    
+                                <td>crying everyday
+                                    </td>
+                                <td>
+                                    $101.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>only good news for a month
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $1,038.00
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>reading obituaries every day
+                                    </td>
+                                <td>
+                                    $482.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>switching from mac to pc for a month
+                                    </td>
+                                <td>
+                                    $285.69
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>all my media was in vr for a month
+                                    </td>
+                                <td>
+                                    $20.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="5">Who should narrate your life?</td>
+                                <td rowspan="5">Feb. 26, 2022, 6:04 p.m.</td>
+                                <td rowspan="5">Feb. 26, 2022, 8:04 p.m.</td>
+                                <td rowspan="5">1907.31</td>
+                                
+                                    
+                                <td><strong>John Green
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $929.31
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Hank Green
+                                    </td>
+                                <td>
+                                    $439.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>WheezyWaiter
+                                    </td>
+                                <td>
+                                    $272.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Morgan Freeman (duh)
+                                    </td>
+                                <td>
+                                    $81.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Adele (singing)
+                                    </td>
+                                <td>
+                                    $186.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="5">What should happen if we hit the Tiltify goal by the end of this stream?</td>
+                                <td rowspan="5">Feb. 26, 2022, 6:19 p.m.</td>
+                                <td rowspan="5">Feb. 26, 2022, 7:17 p.m.</td>
+                                <td rowspan="5">3796.18</td>
+                                
+                                    
+                                <td>Quiet Clone reads a poem
+                                    </td>
+                                <td>
+                                    $177.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Craig with a wig reads a poem
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $1,725.22
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Laugh for 5 minutes straight
+                                    </td>
+                                <td>
+                                    $1,307.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Meditate for 5 minutes straight
+                                    </td>
+                                <td>
+                                    $223.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Juggle for 5 minutes straight
+                                    </td>
+                                <td>
+                                    $363.96
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="4">Dinosaur #1 color?</td>
+                                <td rowspan="4">Feb. 26, 2022, 6:26 p.m.</td>
+                                <td rowspan="4">Feb. 26, 2022, 9:12 p.m.</td>
+                                <td rowspan="4">1381.66</td>
+                                
+                                    
+                                <td><strong>Blue
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $671.23
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Green
+                                    </td>
+                                <td>
+                                    $309.43
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Red
+                                    </td>
+                                <td>
+                                    $220.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Yellow
+                                    </td>
+                                <td>
+                                    $181.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="4">Dinosaur #2 color?</td>
+                                <td rowspan="4">Feb. 26, 2022, 6:28 p.m.</td>
+                                <td rowspan="4">Feb. 26, 2022, 9:18 p.m.</td>
+                                <td rowspan="4">867.22</td>
+                                
+                                    
+                                <td>Blue
+                                    </td>
+                                <td>
+                                    $125.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Green
+                                    </td>
+                                <td>
+                                    $266.22
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Red
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $434.00
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Yellow
+                                    </td>
+                                <td>
+                                    $42.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="3">Sky?</td>
+                                <td rowspan="3">Feb. 26, 2022, 6:28 p.m.</td>
+                                <td rowspan="3">Feb. 26, 2022, 9:29 p.m.</td>
+                                <td rowspan="3">1650.00</td>
+                                
+                                    
+                                <td>Sunrise
+                                    </td>
+                                <td>
+                                    $559.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>High noon
+                                    </td>
+                                <td>
+                                    $195.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Sunset
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $896.00
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="3">Object in sky?</td>
+                                <td rowspan="3">Feb. 26, 2022, 6:29 p.m.</td>
+                                <td rowspan="3">Feb. 26, 2022, 9:45 p.m.</td>
+                                <td rowspan="3">2640.96</td>
+                                
+                                    
+                                <td>Pterosaur
+                                    </td>
+                                <td>
+                                    $1,013.73
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Bird
+                                    </td>
+                                <td>
+                                    $521.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>UFO
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $1,106.23
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Should John drop his daily Diet Dr. Pepper habit?</td>
+                                <td rowspan="2">Feb. 26, 2022, 8:14 p.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 8:37 p.m.</td>
+                                <td rowspan="2">3105.44</td>
+                                
+                                    
+                                <td>Yes
+                                    </td>
+                                <td>
+                                    $1,366.22
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>No
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $1,739.22
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Is sneezing normal?</td>
+                                <td rowspan="2">Feb. 26, 2022, 8:37 p.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 8:59 p.m.</td>
+                                <td rowspan="2">3728.51</td>
+                                
+                                    
+                                <td>yes
+                                    </td>
+                                <td>
+                                    $1,431.33
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>never
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $2,297.18
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Should Hannah make sustained eye contact with the stream for 1 minute?</td>
+                                <td rowspan="2">Feb. 26, 2022, 10:28 p.m.</td>
+                                <td rowspan="2">Feb. 26, 2022, 11:03 p.m.</td>
+                                <td rowspan="2">6538.00</td>
+                                
+                                    
+                                <td><strong>Yes
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $4,460.00
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>No
+                                    </td>
+                                <td>
+                                    $2,078.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Which (entire) box should John eat?</td>
+                                <td rowspan="2">Feb. 26, 2022, 11:59 p.m.</td>
+                                <td rowspan="2">Feb. 27, 2022, 12:51 a.m.</td>
+                                <td rowspan="2">35071.53</td>
+                                
+                                    
+                                <td>Natural-smoked wild kippers
+                                    </td>
+                                <td>
+                                    $6,614.53
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Natural lemon-essenced wild sardines
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $28,457.00
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Can you beat 6 pelicans in a fight?</td>
+                                <td rowspan="2">Feb. 27, 2022, 5:39 a.m.</td>
+                                <td rowspan="2">Feb. 27, 2022, 8:56 a.m.</td>
+                                <td rowspan="2">39894.20</td>
+                                
+                                    
+                                <td>Yes
+                                    </td>
+                                <td>
+                                    $13,985.40
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>No
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $25,908.80
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Who should be the Taskmaster?</td>
+                                <td rowspan="2">Feb. 27, 2022, 7:34 a.m.</td>
+                                <td rowspan="2">Feb. 27, 2022, 8:56 a.m.</td>
+                                <td rowspan="2">6370.74</td>
+                                
+                                    
+                                <td>Hank
+                                    </td>
+                                <td>
+                                    $2,309.58
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Brennan
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $4,061.16
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Should Pat</td>
+                                <td rowspan="2">Feb. 27, 2022, 9:18 a.m.</td>
+                                <td rowspan="2">Feb. 27, 2022, 9:27 a.m.</td>
+                                <td rowspan="2">1204.00</td>
+                                
+                                    
+                                <td><strong>Read
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $645.00
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Sing
+                                    </td>
+                                <td>
+                                    $559.00
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">What should Rosianna draw?</td>
+                                <td rowspan="2">Feb. 27, 2022, 10:18 a.m.</td>
+                                <td rowspan="2">Feb. 27, 2022, 10:46 a.m.</td>
+                                <td rowspan="2">2563.22</td>
+                                
+                                    
+                                <td>Bunny quinceañera
+                                    </td>
+                                <td>
+                                    $1,240.22
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Pooh quinceañera
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $1,323.00
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="4">What should Rosianna paint on her face?</td>
+                                <td rowspan="4">Feb. 27, 2022, 10:51 a.m.</td>
+                                <td rowspan="4">Feb. 27, 2022, 12:16 p.m.</td>
+                                <td rowspan="4">8153.89</td>
+                                
+                                    
+                                <td>Crab
+                                    </td>
+                                <td>
+                                    $1,345.20
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Pizza John
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $4,321.00
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Realistic Cat
+                                    </td>
+                                <td>
+                                    $1,474.08
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Ziggy Stardust
+                                    </td>
+                                <td>
+                                    $1,013.61
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="4">What should the Final Cat be?</td>
+                                <td rowspan="4">Feb. 27, 2022, 12:51 p.m.</td>
+                                <td rowspan="4">Feb. 27, 2022, 1:40 p.m.</td>
+                                <td rowspan="4">7838.13</td>
+                                
+                                    
+                                <td>Taco cat
+                                    </td>
+                                <td>
+                                    $1,626.78
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Pizza John cat
+                                    </td>
+                                <td>
+                                    $1,652.00
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Crab cat
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $3,306.26
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>Dino cat
+                                    </td>
+                                <td>
+                                    $1,253.09
+                                    </td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">Who would win in a fight?</td>
+                                <td rowspan="2">Feb. 27, 2022, 2:57 p.m.</td>
+                                <td rowspan="2">Feb. 27, 2022, 4 p.m.</td>
+                                <td rowspan="2">71640.33</td>
+                                
+                                    
+                                <td>Beanie Sandfurbs
+                                    </td>
+                                <td>
+                                    $15,746.75
+                                    </td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td><strong>Crank Green
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $55,893.58
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                        
+                            <tr>
+                                <td rowspan="2">CAN WE REACH $3 MILLION?</td>
+                                <td rowspan="2">Feb. 27, 2022, 4:01 p.m.</td>
+                                <td rowspan="2">Feb. 27, 2022, 4:59 p.m.</td>
+                                <td rowspan="2">173877.03</td>
+                                
+                                    
+                                <td><strong>YES
+                                    
+                                        </strong></td>
+                                <td><strong>
+                                    $151,806.48
+                                    
+                                        </strong></td>
+                                </tr>
+                                
+                                    
+                                        <tr>
+                                    
+                                <td>DFTBA
+                                    </td>
+                                <td>
+                                    $22,070.55
+                                    </td>
+                                </tr>
+                                
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
+
+
